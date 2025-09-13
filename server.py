@@ -1,6 +1,7 @@
 import socket
+
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(('0.0.0.0', 12345))
+server.bind(('0.0.0.0', 12345))  # 0.0.0.0 se public IP se connect ho sakta hai
 server.listen()
 print("Server started... Waiting for connection...")
 conn, addr = server.accept()
